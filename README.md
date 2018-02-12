@@ -17,9 +17,11 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
     * Data from within 2 hours ago is considered fresh, and will remain in the cache.
     * Data older than 24 hours is considered stale, and will have to be regathered.
     * Data between 2 and 24 hours will slowly be phased out. The newer the data, the higher the chance of it remaining in the cache. Keep percentage is described as "100 - (100 / 24 * hours)".
-  * RigidCachingStrategy
+  * RigidEducationCachingStrategy
     * Data from within 12 hours is considered fresh, and will remain in the the cache.
-    * Data older than 12 hours, is considered stale, and will have to be regathered
+    * Data older than 12 hours, is considered stale, and will have to be regathered.
+  * NoEducationCachingStraegy
+    * Considers all data to be stale.
 
 ## Not implemented yet
 * Not all scrapers have been implemented yet.
