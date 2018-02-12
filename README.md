@@ -6,6 +6,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 * Users should be able to access the scrapers through a browser of their choice. For this ASP.NET Core MVC will be used.
 * The actual scrapers should be in a seperate project. This project will be using Class Library (.NET Core) to seperate it from the actual website.
 * The scrapers should be using a caching strategy. This is necessary to reduce the load on the target websites.
+* There should be a statistics view, where you can see when a scraper was last run and how many educations were found at that time.
 
 ## Implemented so far
 * View and controller for selected the desired scrapers (ASP.NET Core MVC)
