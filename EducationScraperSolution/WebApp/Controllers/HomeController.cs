@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
+using System.Reflection;
 
 namespace WebApp.Controllers
 {
@@ -12,21 +13,22 @@ namespace WebApp.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.robotRoutes = GetRoutes("RobotsController");
             return View();
         }
 
-        public IActionResult About()
+        private string[] GetRoutes(string controller)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            var asm = Assembly.GetExecutingAssembly();
+            return asm.GetTypes()
+                .Where(type => typeof(Controller).IsAssignableFrom(type))
+                .SelectMany(type => type.GetMethods())
+                .Where(method => method.IsPublic &&
+                    !method.IsDefined(typeof(NonActionAttribute)) &&
+                    method.DeclaringType.Name == controller
+                )
+                .Select(e => e.Name)
+                .ToArray();
         }
 
         public IActionResult Error()

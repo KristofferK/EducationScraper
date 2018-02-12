@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{0B44B7D2-9784-4D2D-8C8B-30ED3DF5A587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{0B44B7D2-9784-4D2D-8C8B-30ED3DF5A587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{02668F64-1947-4823-847C-C1279AB0CDA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EducationScrapers", "ClassLibrary1\EducationScrapers.csproj", "{02668F64-1947-4823-847C-C1279AB0CDA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

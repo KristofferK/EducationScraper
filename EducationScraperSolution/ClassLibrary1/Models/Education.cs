@@ -15,6 +15,7 @@ namespace EducationScrapers.Models
     {
         public string Title { get; set; }
         public string Location { get; set; }
+        public string Link { get; set; }
         public string[] Languages { get; set; }
         public int DurationInMonths { get; set; }
         public DateTime DateFetched { get; set; }

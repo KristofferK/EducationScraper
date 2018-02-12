@@ -1,4 +1,5 @@
-﻿using EducationScrapers.Models;
+﻿using EducationScrapers.Library.WebClients;
+using EducationScrapers.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
