@@ -66,6 +66,9 @@ namespace EducationScrapers.Scrapers.UCNDk
             var location = htmlNode.SelectSingleNode("//b[text() = 'Location']/following-sibling::p[1]").InnerHtml;
             education.Location = location.Replace("<br>", " & ");
 
+            // Billeder
+            education.Images.Add("https://www.ucn.dk" + htmlNode.SelectSingleNode("//img[@class='the-image']").Attributes["src"].Value);
+
             return education;
         }
     }

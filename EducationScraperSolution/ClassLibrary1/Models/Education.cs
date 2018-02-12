@@ -22,6 +22,7 @@ namespace EducationScrapers.Models
         public IEnumerable<string> Languages { get; set; }
         public DateTime DateFetched { get; set; } = DateTime.Now;
         public string Description { get; set; }
+        public List<string> Images { get; set; } = new List<string>();
 
         public Education(string link)
         {

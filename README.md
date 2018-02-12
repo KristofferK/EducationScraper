@@ -8,7 +8,8 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 * The scrapers will be using a caching strategy, that will reduce the load on the target websites.
 
 ## Implemented so far
-* Scrapers
+* View and controller for selected the desired scrapers (ASP.NET Core MVC)
+* Scrapers (.NET Core Class Library )
   * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
 * Caching
   * FairEducationCachingStrategy
@@ -18,3 +19,6 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
   * RigidCachingStrategy
     * Data from within 12 hours is considered fresh, and will remain in the the cache.
     * Data older than 12 hours, is considered stale, and will have to be regathered
+
+## Not implemented yet
+* Not all scrapers have been implemented yet.
