@@ -21,7 +21,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
     * Data from within 12 hours is considered fresh, and will remain in the the cache.
     * Data older than 12 hours, is considered stale, and will have to be regathered.
   * NoEducationCachingStraegy
-    * Considers all data to be stale.
+    * Considers all data to be stale. Basically you don't have caching. Mostly useful for when developing or debugging a scraper.
 
 ## Not implemented yet
 * Not all scrapers have been implemented yet.
