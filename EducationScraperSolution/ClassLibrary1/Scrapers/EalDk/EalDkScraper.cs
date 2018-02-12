@@ -25,7 +25,6 @@ namespace EducationScrapers.Scrapers.EalDk
         public Education GetEducationFromLink(string link)
         {
             var source = ReadSource(link);
-            source = source.Replace("Department&nbsp;</h3>", "Department</h3>");
             var htmlNode = HtmlNode.CreateNode(source);
 
             var education = new Education(link);
@@ -55,19 +54,27 @@ namespace EducationScrapers.Scrapers.EalDk
             }
 
             // Location
-            var location = InBetween(source, ">Department</h3>", "</div>");
-            location = location.Replace("<a ", "&<a");
-            location = StripTags(location);
-            location = location.Replace("\n", " ");
-            location = location.Replace("Find on Google Maps", "");
-            location = location.Substring(0, location.Length - 1);
-            education.Location = location;
+            education.Location = ExtractLocation(source);
 
             // Billeder
             var bannerNode = htmlNode.SelectSingleNode("//div[@class='block--banner__image-container']/img");
             education.Images.Add("https://eal.dk" + bannerNode.Attributes["src"].Value);
 
             return education;
+        }
+
+        private string ExtractLocation(string source)
+        {
+            source = source.Replace("Department&nbsp;</h3>", "Department</h3>");
+
+            var location = InBetween(source, ">Department</h3>", "</div>");
+            location = location.Replace("<a ", "&<a");
+            location = StripTags(location);
+            location = location.Replace("\n", " ");
+            location = location.Replace("Find on Google Maps", "");
+            location = location.Substring(0, location.Length - 1);
+
+            return location;
         }
     }
 }
