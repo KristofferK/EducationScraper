@@ -11,7 +11,7 @@ namespace WebApp.Controllers
     {
         public IActionResult UCNDk()
         {
-            var result = new Scraper(new EducationScrapers.Scrapers.UCNDk.UCNDkScraper(), 75).Scrape();
+            var result = new Scraper(new EducationScrapers.Scrapers.UCNDk.UCNDkScraper()).Scrape();
             return Json(result);
         }
     }
