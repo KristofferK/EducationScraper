@@ -10,3 +10,8 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 ## Implemented
 * Some scrapers
   * UCNDk. University College Nordjylland. https://www.ucn.dk/english/programmes-and-courses?filter=all
+* Caching
+  * DefaultCachingStrategy
+    * Data from within 2 hours ago is considered fresh, and will remain in the cache.
+    * Data older than 24 hours is considered stale, and will have to get regathered.
+    * Data between 2 and 24 hours will slowly be phased out. The new the data, the higher the chance of it remaining in the cache. Keep percentage is described as "100 - (100 / 24 * hours)".

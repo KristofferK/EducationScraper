@@ -31,11 +31,7 @@ namespace EducationScrapers.Scrapers.UCNDk
                 return null;
             }
 
-            var education = new Education()
-            {
-                Link = link,
-                DateFetched = DateTime.Now
-            };
+            var education = new Education(link);
 
             // Title
             var imageWithTitle = htmlNode.SelectSingleNode("//div[contains(@class, 'image active')]");

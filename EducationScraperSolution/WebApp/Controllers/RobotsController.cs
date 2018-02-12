@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EducationScrapers.Scrapers;
+using EducationScrapers.Library.Caching.CachingStrategies;
+using EducationScrapers.Scrapers.UCNDk;
 
 namespace WebApp.Controllers
 {
@@ -11,7 +13,9 @@ namespace WebApp.Controllers
     {
         public IActionResult UCNDk()
         {
-            var result = new Scraper(new EducationScrapers.Scrapers.UCNDk.UCNDkScraper()).Scrape();
+            var scrapingStrategy = new UCNDkScraper();
+            var cachingStrategy = new DefaultEducationCachingStrategy();
+            var result = new Scraper(scrapingStrategy, cachingStrategy).Scrape();
             return Json(result);
         }
     }

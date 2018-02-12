@@ -20,7 +20,12 @@ namespace EducationScrapers.Models
         public string Link { get; set; }
         public int DurationInMonths { get; set; }
         public IEnumerable<string> Languages { get; set; }
-        public DateTime DateFetched { get; set; }
+        public DateTime DateFetched { get; set; } = DateTime.Now;
         public string Description { get; set; }
+
+        public Education(string link)
+        {
+            Link = link;
+        }
     }
 }
