@@ -13,6 +13,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
   * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
   * BaaaDk. Business Academy Aarhus. https://www.baaa.dk/programmes/
   * EalDk. Lillebælt Academy. https://www.eal.dk/international/education/full-degree-students/Programmes/
+  * ZibatDk. Zealand Institute of Business and Technology. http://zibat.dk/programmes-open-for-admission-for-september/
 * Caching
   * FairEducationCachingStrategy
     * Data from within 2 hours ago is considered fresh, and will remain in the cache.
