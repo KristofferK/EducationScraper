@@ -28,6 +28,7 @@ namespace WebApp.Controllers
                     method.DeclaringType.Name == controller
                 )
                 .Select(e => e.Name)
+                .OrderBy(e => e)
                 .ToArray();
         }
 

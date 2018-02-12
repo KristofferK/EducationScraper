@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using EducationScrapers.Scrapers;
 using EducationScrapers.Library.Caching.CachingStrategies;
 using EducationScrapers.Scrapers.UCNDk;
+using EducationScrapers.Scrapers.BaaaDk;
 
 namespace WebApp.Controllers
 {
@@ -16,6 +17,14 @@ namespace WebApp.Controllers
             var scrapingStrategy = new UCNDkScraper();
             var cachingStrategy = new FairEducationCachingStrategy();
             var result = new Scraper(scrapingStrategy, cachingStrategy).Scrape();
+            return Json(result);
+        }
+
+        public IActionResult BaaaDk()
+        {
+            var scrapingStrategy = new BaaaDkScraper();
+            var cachingStrategy = new NoEducationCachingStrategy();
+            var result = new Scraper(scrapingStrategy, cachingStrategy, int.MaxValue).Scrape();
             return Json(result);
         }
     }

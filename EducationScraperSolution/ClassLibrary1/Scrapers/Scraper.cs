@@ -16,7 +16,7 @@ namespace EducationScrapers.Scrapers
         public int ScrapingLimit { get; set; }
         public double? DelayInSecondsBetweenRequests { get; set; }
 
-        public Scraper(IScraper scrapingStraetgy, IEducationCachingStrategy cachingStrategy, int scrapingLimit = 10)
+        public Scraper(IScraper scrapingStraetgy, IEducationCachingStrategy cachingStrategy, int scrapingLimit = 50)
         {
             ScrapingStrategy = scrapingStraetgy;
             ScrapingLimit = scrapingLimit;

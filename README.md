@@ -11,6 +11,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 * View and controller for selected the desired scrapers (ASP.NET Core MVC)
 * Scrapers (.NET Core Class Library )
   * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
+  * BaaaDk. Business Academy Aarhus. https://www.baaa.dk/programmes/
 * Caching
   * FairEducationCachingStrategy
     * Data from within 2 hours ago is considered fresh, and will remain in the cache.
