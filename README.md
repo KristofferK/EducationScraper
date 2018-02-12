@@ -7,7 +7,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 * The actual scrapers will be in a Class Library (.NET Core) project to seperate it from the ASP.NET project.
 * The scrapers will be using a caching strategy, that will reduce the load on the target websites.
 
-## Implemented
+## Implemented so far
 * Scrapers
   * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
 * Caching
