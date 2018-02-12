@@ -8,7 +8,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 * The scrapers will be using a caching strategy, that will reduce the load on the target websites.
 
 ## Implemented
-* Some scrapers
+* Scrapers
   * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
 * Caching
   * FairEducationCachingStrategy
