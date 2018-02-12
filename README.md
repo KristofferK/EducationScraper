@@ -9,7 +9,7 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 
 ## Implemented
 * Some scrapers
-  * UCNDk. University College Nordjylland. https://www.ucn.dk/english/programmes-and-courses?filter=all
+  * UCNDk. University College of Northren Denmark. https://www.ucn.dk/english/programmes-and-courses?filter=all
 * Caching
   * FairEducationCachingStrategy
     * Data from within 2 hours ago is considered fresh, and will remain in the cache.
