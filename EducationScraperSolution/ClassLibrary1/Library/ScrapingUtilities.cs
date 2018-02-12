@@ -20,7 +20,7 @@ namespace EducationScrapers.Library
             {
                 { "professional bachelor", EducationLevels.ProfessionalBachelor },
                 { "academy profession", EducationLevels.AcademyProfession },
-                { "top-up", EducationLevels.ProfessionalBachelor },
+                { "top-up", EducationLevels.TopUpDegree },
             };
         }
 

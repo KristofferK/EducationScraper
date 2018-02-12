@@ -9,6 +9,7 @@ namespace EducationScrapers.Models
         Master, // Kandidat & master in Danish
         Bachelor, // Bachelor in Danish
         ProfessionalBachelor, // Professionsbachelor in Danish
+        TopUpDegree, // Top-up in Danish
         AcademyProfession // Erhvervsakademisk Uddannelse
     }
     public class Education
