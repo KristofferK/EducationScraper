@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace EducationScrapers.Scrapers
 {
@@ -13,6 +14,7 @@ namespace EducationScrapers.Scrapers
         public IScraper ScrapingStrategy { get; set; }
         public IEducationCachingStrategy CachingStrategy { get; set; }
         public int ScrapingLimit { get; set; }
+        public double? DelayInSecondsBetweenRequests { get; set; }
 
         public Scraper(IScraper scrapingStraetgy, IEducationCachingStrategy cachingStrategy, int scrapingLimit = 10)
         {
@@ -39,6 +41,10 @@ namespace EducationScrapers.Scrapers
                 }
                 else if (scraped < ScrapingLimit)
                 {
+                    if (DelayInSecondsBetweenRequests.HasValue)
+                    {
+                        Thread.Sleep(Convert.ToInt32(DelayInSecondsBetweenRequests.Value * 1000));
+                    }
                     var education = ScrapingStrategy.GetEducationFromLink(link);
                     if (education != null)
                     {
