@@ -7,6 +7,9 @@ namespace EducationScrapers.Library.Caching.CachingStrategies
 {
     public class FairEducationCachingStrategy : IEducationCachingStrategy
     {
+        public int FreshHours { get; set; } = 2;
+        public int StaleHours { get; set; } = 24;
+
         private static Random rnd = new Random();
 
         public bool KeepInCache(Education education)
@@ -17,9 +20,9 @@ namespace EducationScrapers.Library.Caching.CachingStrategies
 
         private double KeepPercentageChance(double hours)
         {
-            if (hours > 24) return -1;
-            if (hours < 2) return 100;
-            return 100 - (100 / 24 * hours);
+            if (hours > StaleHours) return -1;
+            if (hours < FreshHours) return 100;
+            return 100 - (100 / StaleHours * hours);
         }
     }
 }
