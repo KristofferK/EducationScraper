@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EducationScrapers.Library.Caching.CachingStrategies
 {
-    public class DefaultEducationCachingStrategy : IEducationCachingStrategy
+    public class FairEducationCachingStrategy : IEducationCachingStrategy
     {
         private static Random rnd = new Random();
 

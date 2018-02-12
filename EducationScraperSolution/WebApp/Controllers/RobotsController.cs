@@ -14,7 +14,7 @@ namespace WebApp.Controllers
         public IActionResult UCNDk()
         {
             var scrapingStrategy = new UCNDkScraper();
-            var cachingStrategy = new DefaultEducationCachingStrategy();
+            var cachingStrategy = new FairEducationCachingStrategy();
             var result = new Scraper(scrapingStrategy, cachingStrategy).Scrape();
             return Json(result);
         }
