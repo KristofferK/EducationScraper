@@ -28,3 +28,4 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 
 ## Not implemented yet
 * Not all scrapers have been implemented yet.
+* Statistics
