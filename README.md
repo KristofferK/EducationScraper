@@ -28,4 +28,9 @@ Project in c# (ASP.NET Core MVC) for scraping educations from a few Danish acade
 
 ## Not implemented yet
 * Not all scrapers have been implemented yet.
+  * EADaniaCom. Dania Academy. https://eadania.com/programmes/english-taught/
+  * EasvDk. Business Academy Southwest. https://www.easv.dk/en/programmes/
+  * CphBusinessDk. Copenhagen Business Academy. https://www.cphbusiness.dk/english/study-programmes
+  * KeaDk. Copenhagen School of Design and Technology. http://www.kea.dk/en/programmes/
+  * PhMetropolDk. Metropolitan University College. https://www.phmetropol.dk/english/study+programmes
 * Statistics
